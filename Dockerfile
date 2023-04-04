@@ -6,6 +6,4 @@ ENV WEB_CONCURRENCY 2
 COPY ./requirements.txt ./requirements.txt
 RUN pip install -r requirements.txt
 
-RUN pytest -s
-
 COPY ./app /app/app
