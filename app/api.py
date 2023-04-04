@@ -1,8 +1,5 @@
 import traceback
 
-from dotenv import load_dotenv
-
-load_dotenv()
 
 from fastapi import FastAPI, UploadFile
 from starlette.responses import RedirectResponse
