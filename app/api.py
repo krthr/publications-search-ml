@@ -1,8 +1,10 @@
+from dotenv import load_dotenv
+
+load_dotenv()
+
 import traceback
 
-
 from fastapi import FastAPI, UploadFile
-
 from app.embedder import Embedder, device, CLIP_MODEL
 from app.models import ImageEmbeddingsResponse
 
