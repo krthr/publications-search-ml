@@ -2,7 +2,7 @@ import clip
 import torch
 
 
-CLIP_MODEL = "ViT-L/14@336px"
+CLIP_MODEL = "ViT-B/32"
 
 print(f"using model={CLIP_MODEL}")
 

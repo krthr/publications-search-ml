@@ -4,7 +4,7 @@ import torch
 from io import BytesIO
 from PIL import Image
 
-CLIP_MODEL = "ViT-L/14@336px"
+CLIP_MODEL = "ViT-B/32"
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model, preprocess = clip.load(CLIP_MODEL, device=device)

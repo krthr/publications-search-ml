@@ -2,9 +2,8 @@ import traceback
 
 
 from fastapi import FastAPI, UploadFile
-from starlette.responses import RedirectResponse
 
-from app.embedder import Embedder
+from app.embedder import Embedder, device, CLIP_MODEL
 from app.models import ImageEmbeddingsResponse
 
 
@@ -14,8 +13,14 @@ app = FastAPI()
 
 
 @app.get("/", include_in_schema=False)
-def docs_redirect():
-    return RedirectResponse(f"/docs", status_code=301)
+def index():
+    return {
+        "hi": "hola!",
+        "device": device,
+        "models": {
+            "model": CLIP_MODEL,
+        },
+    }
 
 
 @app.post("/image/embeddings", response_model=ImageEmbeddingsResponse)
