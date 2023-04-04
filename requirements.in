@@ -1,0 +1,13 @@
+fastapi>=0.95.0
+uvicorn
+python-dotenv
+pydantic>=1.10.7
+python-multipart
+openai 
+
+git+https://github.com/openai/CLIP.git
+
+torch 
+torchvision
+httpx
+pytest
